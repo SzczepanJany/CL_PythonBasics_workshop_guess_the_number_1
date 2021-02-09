@@ -16,12 +16,13 @@ def ask_for_answer():
 
 def check_answer(user_imput, computer_imput):
     if user_imput < computer_imput:
-        print("To small")
+        print("To small!")
         return False
     elif user_imput > computer_imput:
-        print("To big")
+        print("To big!")
         return False
     else:
+        print("You win!")
         return True
 
 
