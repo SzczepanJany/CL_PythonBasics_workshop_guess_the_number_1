@@ -14,5 +14,20 @@ def ask_for_answer():
             print("It's not a number!")
     return user_answer
 
+def check_answer(user_imput, computer_imput):
+    if user_imput < computer_imput:
+        print("To small")
+        return False
+    elif user_imput > computer_imput:
+        print("To big")
+        return False
+    else:
+        return True
+
+
 computer_picked_number = pick_a_number()
-user_picked_number = ask_for_answer()
+win_status = False
+
+while win_status == False:
+    user_picked_number = ask_for_answer()
+    win_status = check_answer(user_picked_number, computer_picked_number)
